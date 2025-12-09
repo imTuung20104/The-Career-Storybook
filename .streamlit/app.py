@@ -53,22 +53,38 @@ with tab2: # KINH NGHIỆM
     st.markdown("### ☕ 2024: TRUNG COFFEE")
     st.write("- Tư vấn bán hàng & Chăm sóc khách hàng quốc tế.")
 
-with tab3: # NHIẾP ẢNH
+# TAB 3: NHIẾP ẢNH
+with tab3:
     st.header("Chapter III: The Visual Lab")
-    c1, c2, c3 = st.columns(3)
-    with c1: st.image("https://images.unsplash.com/photo-1516035069371-29a1b244cc32", caption="Street")
-    with c2: st.image("https://images.unsplash.com/photo-1555421689-491a97ff2040", caption="Logistics")
-    with c3: st.image("https://images.unsplash.com/photo-1511379938547-c1f69419868d", caption="Music")
-
-with tab4: # DỰ ÁN
+    col_p1, col_p2, col_p3 = st.columns(3)
+    
+    with col_p1:
+        # Thay bằng tên file ảnh 1 của bạn
+        st.image("photo_1.jpg", caption="Street Vibe") 
+    with col_p2:
+        # Thay bằng tên file ảnh 2 của bạn
+        st.image("photo_2.jpg", caption="Logistics Art")
+    with col_p3:
+        # Thay bằng tên file ảnh 3 của bạn
+        st.image("photo_3.jpg", caption="Music Soul")
+# TAB 4: DỰ ÁN
+with tab4:
     st.header("Chapter IV: The Logic Core")
     c1, c2 = st.columns(2)
+    
     with c1:
         st.info("📦 **Logistics Cost Analyzer**")
+        # Thay bằng ảnh dự án Logistics của bạn
+        st.image("du_an_logistics.jpg", use_column_width=True) 
         st.write("Tool Python tự động so sánh giá cước vận chuyển.")
+        st.markdown("[👉 Xem Code trên GitHub](https://github.com/imTuung20104/Logistics-Cost-Analyzer)")
+        
     with c2:
-        st.error("🇨🇳 **Trade Dashboard**")
+        st.error("🇨🇳 **China-Vietnam Trade Dashboard**")
+        # Thay bằng ảnh dự án Dashboard của bạn
+        st.image("du_an_dashboard.jpg", use_column_width=True)
         st.write("Bảng điều khiển theo dõi kim ngạch XNK.")
-
+        st.markdown("[👉 Xem Code trên GitHub](https://github.com/imTuung20104/China-Vietnam-Trade-Report)")
 st.markdown("---")
+
 st.markdown("<center>© 2025 The Career Storybook | Directed by Bui Xuan Tung</center>", unsafe_allow_html=True)
