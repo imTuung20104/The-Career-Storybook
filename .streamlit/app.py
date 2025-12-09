@@ -56,8 +56,7 @@ with tab2: # KINH NGHIỆM
 # TAB 3: NHIẾP ẢNH
 with tab3:
     st.header("Chapter III: The Visual Lab")
-    col_p1, col_p2, col_p3 = st.columns(3)
-    
+    col_p1, col_p2, col_p3 = st.columns(3) 
     with col_p1:
         # Thay bằng tên file ảnh 1 của bạn
         st.image("photo_1.jpg", caption="Street Vibe") 
@@ -88,3 +87,4 @@ with tab4:
 st.markdown("---")
 
 st.markdown("<center>© 2025 The Career Storybook | Directed by Bui Xuan Tung</center>", unsafe_allow_html=True)
+
