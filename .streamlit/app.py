@@ -7,19 +7,29 @@ st.set_page_config(
     layout="wide"
 )
 
-# --- CSS TÙY CHỈNH (GIAO DIỆN CINEMATIC) ---
+# --- CSS TÙY CHỈNH (GIAO DIỆN CINEMATIC + HOVER EFFECT) ---
 st.markdown("""
 <style>
     /* Font tiêu đề vàng kim sang trọng */
     h1, h2, h3 { color: #D4AF37 !important; font-family: 'serif'; }
     
-    /* Chỉnh màu chữ nội dung sáng hơn để dễ đọc trên nền tối */
+    /* Chỉnh màu chữ nội dung */
     p, li, span, div { color: #e0e0e0; font-size: 16px; }
     
-    /* Bo góc ảnh cho mềm mại */
-    img { border-radius: 5px; }
+    /* --- HIỆU ỨNG ẢNH CAO CẤP --- */
+    img { 
+        border-radius: 10px; /* Bo góc mềm mại */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt */
+    }
     
-    /* Ẩn menu mặc định của Streamlit */
+    /* Khi di chuột vào ảnh */
+    img:hover {
+        transform: scale(1.02); /* Phóng to nhẹ 2% */
+        box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2); /* Đổ bóng màu vàng kim */
+        z-index: 10;
+    }
+    
+    /* Ẩn menu mặc định */
     #MainMenu { visibility: hidden; }
     footer { visibility: hidden; }
     header { visibility: hidden; }
@@ -132,3 +142,4 @@ with tab4:
 # --- FOOTER ---
 st.markdown("---")
 st.markdown("<center>© 2025 The Career Storybook | Directed by Bui Xuan Tung</center>", unsafe_allow_html=True)
+
