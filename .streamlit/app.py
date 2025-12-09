@@ -98,27 +98,48 @@ with tab2:
     st.write("- Tư vấn bán hàng & Chăm sóc khách hàng quốc tế.")
     st.write("- Sử dụng tiếng Anh/Trung để giao tiếp và xử lý khiếu nại.")
 
-# === TAB 3: BỘ SƯU TẬP ẢNH (LOOKBOOK) ===
+# === TAB 3: BỘ SƯU TẬP ẢNH (LOOKBOOK NGHỆ THUẬT) ===
 with tab3:
     st.header("Chapter III: The Visual Lab")
-    st.write("📸 *Captured with Sony a6400 | 18-105mm f4 G*")
+    st.caption("📸 *Captured with Sony a6400 | Processed in Lightroom Classic*")
     
-    # HÀNG 1: 3 ẢNH
-    c1, c2, c3 = st.columns(3)
-    with c1:
-        st.image("https://raw.githubusercontent.com/imTuung20104/The-Career-Storybook/88da9d5d839d98e0bd2473a145b14def53a5f8c5/photo_1.jpg", caption="Shot 01")
-    with c2:
-        st.image("https://raw.githubusercontent.com/imTuung20104/The-Career-Storybook/88da9d5d839d98e0bd2473a145b14def53a5f8c5/photo_2.jpg", caption="Shot 02")
-    with c3:
-        st.image("https://raw.githubusercontent.com/imTuung20104/The-Career-Storybook/88da9d5d839d98e0bd2473a145b14def53a5f8c5/photo_3.jpg", caption="Shot 03")
+    # --- PHẦN 1: HERO SHOT (ẢNH CHỦ ĐẠO - TO NHẤT) ---
+    # Dùng ảnh số 3 làm điểm nhấn (hoặc ảnh nào bạn thấy đẹp nhất)
+    st.image("https://raw.githubusercontent.com/imTuung20104/The-Career-Storybook/88da9d5d839d98e0bd2473a145b14def53a5f8c5/photo_3.jpg", use_column_width=True)
+    st.caption("📍 *The Cinematic Perspective - (Tiêu cự 18mm)*")
+    
+    st.write("---") # Đường kẻ ngăn cách
+    
+    # --- PHẦN 2: GRID SHOTS (LƯỚI ẢNH SO LE) ---
+    col_a, col_b = st.columns(2)
+    
+    with col_a:
+        # Ảnh 1: Street Vibe
+        st.image("https://raw.githubusercontent.com/imTuung20104/The-Career-Storybook/88da9d5d839d98e0bd2473a145b14def53a5f8c5/photo_1.jpg")
+        st.markdown("**01. Street Rhythm**")
+        st.caption("Bắt trọn nhịp sống đô thị.")
         
-    # HÀNG 2: 2 ẢNH (CĂN GIỮA CHO ĐẸP)
-    c4, c5 = st.columns(2)
-    with c4:
-        st.image("https://raw.githubusercontent.com/imTuung20104/The-Career-Storybook/88da9d5d839d98e0bd2473a145b14def53a5f8c5/photo_4.jpg", caption="Shot 04")
-    with c5:
-        st.image("https://raw.githubusercontent.com/imTuung20104/The-Career-Storybook/88da9d5d839d98e0bd2473a145b14def53a5f8c5/photo_6.jpg", caption="Shot 05")
+        st.write("") # Khoảng trống
+        
+        # Ảnh 4: Góc nhìn lạ
+        st.image("https://raw.githubusercontent.com/imTuung20104/The-Career-Storybook/88da9d5d839d98e0bd2473a145b14def53a5f8c5/photo_4.jpg")
+        st.markdown("**03. The Detail**")
+        st.caption("Chi tiết tạo nên tổng thể.")
 
+    with col_b:
+        # Ảnh 2: Ánh sáng
+        st.write("") # Đẩy ảnh xuống một chút để tạo hiệu ứng so le (Staggered Grid)
+        st.write("") 
+        st.image("https://raw.githubusercontent.com/imTuung20104/The-Career-Storybook/88da9d5d839d98e0bd2473a145b14def53a5f8c5/photo_2.jpg")
+        st.markdown("**02. Light & Shadow**")
+        st.caption("Trò chơi của ánh sáng.")
+        
+        st.write("")
+        
+        # Ảnh 6: Cảm xúc
+        st.image("https://raw.githubusercontent.com/imTuung20104/The-Career-Storybook/88da9d5d839d98e0bd2473a145b14def53a5f8c5/photo_6.jpg")
+        st.markdown("**04. The Mood**")
+        st.caption("Màu sắc kể chuyện.")
 # === TAB 4: DỰ ÁN ===
 with tab4:
     st.header("Chapter IV: The Logic Core")
@@ -142,4 +163,5 @@ with tab4:
 # --- FOOTER ---
 st.markdown("---")
 st.markdown("<center>© 2025 The Career Storybook | Directed by Bui Xuan Tung</center>", unsafe_allow_html=True)
+
 
